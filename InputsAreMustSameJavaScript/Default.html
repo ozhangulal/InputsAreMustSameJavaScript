@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JQuery check if passwords are same or not !</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/easyStyle.css" rel="stylesheet" />
+    <title>jQuery Check if string empty or null</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $('#btnCheck').click(function () {
+                var txt = $('#txtFirstPassword');
+                var txt2 = $('#txtSecondPassword');
+                if (txt.val() != txt2.val()) {
+
+                    alert('Passwords does not match !')
+                    document.getElementById("txtFirstPassword").value = '';
+                    document.getElementById("txtSecondPassword").value = '';
+
+                } else {
+                    //You can write here whatever you want !!!
+
+                }
+
+            })
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <div class="form-group" id="firstDivision">
+            <label for="examplePassword">Password:</label>
+            <input type="password" class="form-control" id="txtFirstPassword" aria-describedby="PasswordHelp" placeholder="Enter password">
+
+            <label for="examplePassword">Password Again:</label>
+            <input type="password" class="form-control" id="txtSecondPassword" aria-describedby="passwordHelp" placeholder="Enter password again">
+            <small id="passwordHelp" class="form-text text-muted">You should write your password twice.</small>
+
+            <button type="button" class="btn btn-primary" id="btnCheck">Submit</button>
+        </div>
+
+    </form>
+</body>
+</html>
